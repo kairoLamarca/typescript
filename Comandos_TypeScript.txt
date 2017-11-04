@@ -1,0 +1,8 @@
+npm install -g typescript
+tsc -v
+
+tsc app.ts //isso pega o arquivo TypeScript e cria um novo com extensão js, convertendo para JavaScript
+
+tsc -init //cria o arquivo tsconfig.json
+
+tsc -w //deixa ele rodando e quando salvo o arquivo, ele ja converte
