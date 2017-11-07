@@ -58,14 +58,25 @@ var Pessoa = /** @class */ (function () {
     return Pessoa;
 }());
 var pessoa = new Pessoa('José', 'Veloster');
-console.log(pessoa.dizerCarroPreferido());
+//console.log(pessoa.dizerCarroPreferido());
 /* Criar Carros */
 var carroA = new Carro('DogeJourney', 4);
-var carroB = new Carro('Valoster', 3);
+var carroB = new Carro('Veloster', 3);
 var carroC = new Carro('Cerato', 4);
 /* Montar a lista de carros da concessionaria */
 //let listaDeCarros: Array<Carro> = [carroA, carroB, carroC];
 var listaDeCarros = [carroA, carroB, carroC];
 var concessionaria = new Concessionaria('Av paulista', listaDeCarros);
 /* Exibir a lista de carros */
-console.log(concessionaria.mostrarListaDeCarros());
+//console.log(concessionaria.mostrarListaDeCarros());
+/* comprar o carro */
+var cliente = new Pessoa('João', 'Veloster');
+//console.log(cliente.dizerCarroPreferido());
+concessionaria.mostrarListaDeCarros().map(function (carro) {
+    //console.log(carro);
+    if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+        //comprar o carro
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente.dizerCarroQueTem());
