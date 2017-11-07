@@ -64,14 +64,17 @@ class Pessoa {
     }
 
     public dizerCarroPreferido(): string {
-
+        return this.carroPreferido;
     }
 
-    public comprarCarro(): string {
-
+    public comprarCarro(carro: any): void {
+        this.carro = carro;
     }
 
-    public dizerCarroQueTem(): Carro {
-
+    public dizerCarroQueTem(): any {
+        return this.carro;
     }
 }
+
+let pessoa = new Pessoa('José', 'Veloster');
+console.log(pessoa.dizerCarroPreferido());
